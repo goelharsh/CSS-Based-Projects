@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(66, 55, 78);
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.circleGradient1{
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-image: linear-gradient(to right, blueviolet, rgb(240, 225, 227));
+  position: absolute;
+}
+.circleGradient2{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-image: linear-gradient(to left, blueviolet, rgb(240, 225, 227));
+    position: absolute;
+}
+.circleGradient1 {
+  transform: translate(-280px, -150px);
+}
+
+.circleGradient2 {
+  transform: translate(280px, 100px);
+}
+
+/* Wrapper for the flipping effect */
+.card-wrapper {
+  position: relative;
+  width: 30rem;
+  height: 18rem;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-wrapper:hover {
+  transform: rotateY(180deg);
+}
+
+/* Common styling for both sides */
+.frontcard,
+.backcard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backface-visibility: hidden;
+}
+
+/* Front side */
+.frontcard {
+  z-index: 2;
+}
+
+.cardlogo {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  object-fit: contain;
+}
+
+.cardtitle {
+  font-size: 30px;
+  color: #fff;
+}
+
+.cardDetail {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chipimage {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  object-fit: contain;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 30px;
+  margin-top: 40px;
+}
+
+.cardNumber {
+  font-size: 32px;
+  color: #fff;
+}
+
+.carttitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.holdername {
+  color: #fff;
+  padding-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.holdername h2 {
+  font-size: 25px;
+}
+
+.validity {
+}
+
+/* Back side */
+.backcard {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.back-content {
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.blackstripe {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  border: none;
+}
+.stripes{
+    width: 90%;
+    margin: 30px auto;
+}
+.whitestripe {
+  width: 100%;
+  height: 24px;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px;
+  position: relative;
+}
+
+.overridestripe{
+    width: 80%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    top: 7.5rem;
+    padding-left: 30px;
+}
+
+.whitelines{
+    height: 3px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.carddesc{
+    color: white;
+    margin: 20px auto;
+}
