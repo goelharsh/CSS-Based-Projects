@@ -15,7 +15,7 @@
 
 .card {
   width: 20rem;
-  height: 30rem;
+  height: 27rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +74,7 @@
   margin: 10px;
 }
 .bottomContainer .icons {
-  margin-top: 15px;
+  margin-top: 10px;
   border-radius: 100%;
   width: 27px;
   height: 27px;
@@ -100,7 +100,7 @@
 }
 
 .buttons {
-  margin-top: 15px;
+  /* margin-top: px; */
   display: flex;
   gap: 20px;
   align-items: center;
@@ -117,13 +117,15 @@
 }
 
 .statistics{
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 .statistics p {
+  display: flex;
+  gap: 10px;
     align-items: center;
     justify-content: center;
 }
